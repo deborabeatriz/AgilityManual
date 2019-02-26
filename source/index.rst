@@ -1,5 +1,5 @@
-Agility Documentation: User Manual
-===================================
+Agility Documentation: User Manual Heitor
+=========================================
 
 
 Another simple header
