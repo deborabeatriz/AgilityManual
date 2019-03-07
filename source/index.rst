@@ -1,9 +1,10 @@
-Agility Documentation: User Manual Heitor
-=========================================
+Manual do Usuário do Agility 
+============================ 
 
+Tudo o que você precisa saber sobre o Agility
 
-Another simple header
-=====================
+Configurando o Agility
+======================
 
 Here is some text explaining some very complicated stuff.
 
