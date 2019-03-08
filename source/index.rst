@@ -17,7 +17,6 @@ podem ser informativos.
    Serviços
    
 
-  
 Triagem Automática
 ================== 
 
@@ -36,11 +35,4 @@ Dependendo da configuração da triagem automática, um chamado pode ser classif
    Endereço
    Prioridade   
    
-  
-
-Cadastros
-=========
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+ 
