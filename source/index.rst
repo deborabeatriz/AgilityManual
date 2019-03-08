@@ -3,26 +3,41 @@ Manual do Usuário do Agility
 
 Tudo o que você precisa saber sobre o Agility
 
-Configurando o Agility
-======================
 
-Here is some text explaining some very complicated stuff.
+Temas e Serviços
+================
 
-    print 'hello'
-	>> hello
+.. figure:: tema_conf.png
+   :scale: 50 %
+   :alt: configuração de temas
 
-Guide
-=====
+     
+.. figure:: tema.png
+   :scale: 50 %
+   :alt: resultado da configuração para 'iluminação'
+
+   
+Triagem Automática
+================== 
+
+Dependendo da configuração da triagem automática, um chamado pode ser classificado em três categorias distintas: 
+
+* Aprovado Automaticamente
+* Em Verificação
+* Reprovado Automaticamente
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 5
    
-   license
-   help
+   Geral 
+   Palavras
+   Imagem
+   Endereço
+   Prioridade   
+   
 
-
-Indices and tables
-==================
+Cadastros
+=========
 
 * :ref:`genindex`
 * :ref:`modindex`
