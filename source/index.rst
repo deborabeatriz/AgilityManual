@@ -7,16 +7,17 @@ Tudo o que você precisa saber sobre o Agility
 Temas e Serviços
 ================
 
-.. figure:: tema_conf.png
-   :scale: 50 %
-   :alt: configuração de temas
+Em cada instalação do Agility é possível configurar vários níveis de temas, com ícones próprios associados, atribuindo serviços ao último nível. Os serviços podem dar origem a abertura de chamados, ou 
+podem ser informativos.
 
-     
-.. figure:: tema.png
-   :scale: 50 %
-   :alt: resultado da configuração para 'iluminação'
-
+.. toctree::
+   :maxdepth: 3
    
+   Temas
+   Serviços
+   
+
+  
 Triagem Automática
 ================== 
 
@@ -27,7 +28,7 @@ Dependendo da configuração da triagem automática, um chamado pode ser classif
 * Reprovado Automaticamente
 
 .. toctree::
-   :maxdepth: 5
+   :maxdepth: 6
    
    Geral 
    Palavras
@@ -35,6 +36,7 @@ Dependendo da configuração da triagem automática, um chamado pode ser classif
    Endereço
    Prioridade   
    
+  
 
 Cadastros
 =========
