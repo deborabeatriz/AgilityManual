@@ -26,24 +26,30 @@ Através dos cadastros é possível personalizar o Agility para a prefeitura ou 
 Usuários
 -------- 
 
-Os diversos tipos de usuário podem ser criados com os perfis necessários de acesso. São eles: usuário comum, cliente se empresa ou cidadão se governo, funcionário da empresa ou governo e atendente, que efetua a abertura de chamados no nome de outros solicitantes.
+Os diversos tipos de usuário podem ser criados com os perfis necessários de acesso. São eles: solicitante, operador ou gestor e atendente.
 
-Usuário
-^^^^^^^ 
+Solicitante
+^^^^^^^^^^^
 
 Um usuário comum do Agility seria um cidadão, no caso de governo, ou um cliente, no caso de empresa privada.
 
 
-Funcionário
-^^^^^^^^^^^
+Operador
+^^^^^^^^
 
 Funcionário da empresa ou governo
 
+
+Gestor
+^^^^^^
+
+Executa análises gerenciais no sistema Agility
+
+
 Atendente
-^^^^^^^^^
+^^^^^^^^^^
 
 Efetua abertura de chamados no nome de outros solicitantes.
-
 
 
 Temas e Serviços
@@ -55,13 +61,13 @@ Em cada instalação do Agility é possível configurar vários níveis de temas
 Temas
 ^^^^^^
 
-A figura a seguir demonstra uma lista de temas configurados, sendo que os níveis são indicados na coluna pai. 
+A figura a seguir demonstra uma lista de temas configurados, sendo que o nível indicado em pai é o nível anterior a ser navegado até que se chegue ao nível atual.
 
 .. figure:: tema_conf.png
    :scale: 35 %
    :alt: tela de configuração de temas
 
-A figura a seguir ilustra com são exibidos no menu de solicitação de serviços os temas que não têm um código de pai associado. Eles aparecem no primeiro nível.
+A figura a seguir ilustra como são exibidos no menu de solicitação de serviços os primeiros temas do nível, ou seja, que não têm um código de pai associado.
 
 .. figure:: tema.png
    :scale: 35 %
@@ -76,9 +82,11 @@ A seguir estão ilustrados os temas associados ao nível 'Iluminação'.
 Serviços
 ^^^^^^^^
 
-Os temas do último nível são associados cada qual a um serviço. Por sua vez, o serviço pode ou não dar origem a um chamado, dependendo das informações indicadas em seu cadastro. 
+Os temas do último nível da navegação devem ser associados cada obrigatoriamente a um serviço. Por sua vez, o serviço pode ou não dar origem a um chamado, dependendo das informações indicadas em seu cadastro. 
 
-A figura a seguir mostra a primeira aba do cadastro de um serviço. Quando o serviço é meramente informativo, a opção do cadastro 'Elegível Chamado' fica desabilitada, sendo que o serviço exibe apenas textos informativos indicados na aba "Textos Serviços". Já um serviço que pode dar origem a um chamado, tem a opção do cadastro 'Elegível Chamado' habilitada. Também exibe textos informativos. Além disso, serviços que podem dar origem a chamados têm vários parâmetros configuráveis informados na aba "Parâmetros Chamado".
+A figura a seguir mostra a primeira aba do cadastro de um serviço. 
+Quando o serviço é meramente informativo, a opção do cadastro 'Elegível Chamado' fica desabilitada, sendo que o serviço exibe apenas textos informativos indicados na aba "Textos Serviços". 
+Já um serviço que pode dar origem a um chamado, tem a opção do cadastro 'Elegível Chamado' habilitada. Além disso, serviços que podem dar origem a chamados possuem parâmetros configuráveis informados na aba "Parâmetros Chamado".
 
 .. figure:: servico_conf.png
    :scale: 45 %
@@ -101,23 +109,23 @@ Triagem Automática
 
 Dependendo da configuração da triagem automática, um novo chamado pode ser classificado em três categorias distintas: 
 
-* Aprovado Automaticamente: a classificação de aprovado pode ser trocado durante o tempo indicado no cadastro do serviço. Passado esse tempo, as tarefas do chamado ficam habilitadas para planejamento automático ou manual
+* Aprovado Automaticamente: a classificação de aprovado pode ser trocada pelo operador durante o tempo indicado na aba parâmetros do chamado do cadastro de serviço. Passado esse tempo, as tarefas do chamado ficam habilitadas para planejamento automático ou manual
 
-* Em Verificação: a classificação em verificação precisa de ação manual. Um chamado classificado assim tem que ser aprovado ou reprovado manualmente para que seu planejamento automático ou manual seja habilitado
+* Em Verificação: a classificação em verificação precisa de ação manual do operador. Um chamado classificado assim tem que ser aprovado manualmente para que seu planejamento automático ou manual seja habilitado. Sua recusa retorna uma resposta ao solicitante do chamado de que ele não foi atendido.
 
-* Reprovado Automaticamente: a classificação de reprovado pode ser trocada durante o tempo indicado no cadastro do serviço. Passado esse tempo, o chamado é recusado, o usuário recebe mensagem com as razões da recusa e as tarefas do chamado não podem mais ser habilitadas para planejamento automático ou manual
+* Reprovado Automaticamente: a classificação de reprovado pode ser trocada pelo operador durante o tempo indicado na aba parâmetros do chamado do cadastro de serviço. Passado esse tempo, o chamado é recusado, o usuário recebe mensagem automática com as razões da recusa e as tarefas do chamado não podem mais ser planejadas.
 
 
 
 Texto
 ^^^^^
 
-Há dois tipos de triagem distintas para texto
+Há dois tipos de triagem distintas para texto:
 
   Palavras Ofensivas
-     Com base em um cadastro de palavras ofensivas, fornecido pelo Agility e mantido pela contratante, o Agility calcula quantas palavras ofensivas existem no texto. Seguindo os números máximos de palavras ofensivas configurados na triagem, o chamado pode ser aprovado automaticamente, reprovado automaticamente ou colocado em verificação nessa triagem.   
+     Com base em um cadastro de palavras ofensivas, fornecido pelo Agility e mantido pelo operador, o Agility verifica a cada novo chamado quantas palavras ofensivas existem em seu texto. Seguindo os números máximos de palavras ofensivas configurados na triagem, o chamado pode ser aprovado automaticamente, reprovado automaticamente ou colocado em verificação para essa triagem.   
   Palavras Relevantes
-     Com base em um cadastro de palavras irrelevantes, fornecido pelo Agility e mantido pela contratante, o Agility calcula quantas palavras relevantes existem de fato no texto. Seguindo os números mínimos de palavras relevantes configurados na triagem, o chamado pode ser aprovado automaticamente, reprovado automaticamente ou colocado em verificação nessa triagem.   
+     Com base em um cadastro de palavras irrelevantes, fornecido pelo Agility e mantido pelo operador, o Agility calcula quantas palavras relevantes existem de fato no texto. Para isso desconta do texto as palavras ofensivas e as palavras irrelevantes cadastradas. Seguindo os números mínimos de palavras relevantes configurados na triagem, o chamado pode ser aprovado automaticamente, reprovado automaticamente ou colocado em verificação para essa triagem.   
 
 
 Imagem
@@ -135,7 +143,7 @@ Utilizando inteligência artificial, o Agility analisa e classifica automaticame
 
 * Muito Provavelmente
 
-Seguindo as categorias configuradas na triagem, o chamado pode ser aprovado automaticamente, reprovado automaticamente ou colocado em verificação nessa triagem.   
+Seguindo as categorias configuradas na triagem, o chamado pode ser aprovado automaticamente, reprovado automaticamente ou colocado em verificação para essa triagem.   
 
 
 
@@ -143,21 +151,21 @@ Endereço
 ^^^^^^^^
 
 
-Utilizando Google Maps, o Agility analisa e classifica automaticamente os endereços informados no chamado. As categorizações possíveis quanto à precisão do endereço são:
+Utilizando Google Maps, o Agility analisa e classifica automaticamente os endereços informados no chamado. As categorizações possíveis quanto à precisão do endereço informado pelo solicitante são:
 
 * GPS: obtido automaticamente através do GPS do celular
 
 * Preciso: o endereço informado foi encontrado com precisão, ou seja, logradouro e número
 
-* Entre dois pontos: foi encontrado um logradouro para o endereço informado, mas o local encontra-se entre dois números 
+* Entre dois pontos: foi encontrado um logradouro para o endereço informado, mas o local apontado encontra-se entre dois números de um logradouro
 
-* Centro de rua ou polígono: foi encontrado um local para o endereço informado, mas encontra-se em um logradouro, sem ser possível determinar um número, ou em uma área
+* Centro de rua ou polígono: foi encontrado um local para o endereço informado, mas encontra-se em um logradouro, sem ser possível determinar entre quais números está
 
-* Aproximado: não foi possível encontrar um logradouro ou uma área específica
+* Aproximado: não foi possível encontrar um logradouro ou uma área específica para o local informado
 
-* Manual: endereço digitado manualmente, sem uso do Google Maps
+* Manual: endereço digitado manualmente pelo solicitante, ou seja, não houve uso do Google Maps seja por algum erro interno em sua execução ou porque o dispositivo móvel não estava conectado a Internet no momento da abertura do chamado
 
-Seguindo as categorias configuradas na triagem, o chamado pode ser aprovado automaticamente, reprovado automaticamente ou colocado em verificação nessa triagem.   
+Seguindo as categorias configuradas na triagem, o chamado pode ser aprovado automaticamente, reprovado automaticamente ou colocado em verificação para essa triagem.   
 
 
 
@@ -165,8 +173,9 @@ Seguindo as categorias configuradas na triagem, o chamado pode ser aprovado auto
 Prioridade
 ^^^^^^^^^^
 
-O Agility tem faixas de prioridade configuráveis.  A seguir, as figuras mostram exemplos com duas configurações de instalações distintas do Agility. 
-Na primeira o cliente optou por três faixas de prioridade e na segunda, por cinco. As prioridades sempre começam em 0 e vão até o valor mais alto das faixas. Nos exemplos, vão de 0 a 100. A coluna valor representa o valor mais alto da faixa.
+O Agility tem faixas de prioridade configuráveis.  A seguir, as figuras mostram exemplos com duas configurações de faixas em instalações distintas do Agility. 
+Na primeira, o operador optou por três faixas de prioridade, entregues pelo Agility como padrão, e na segunda, por cinco. 
+As prioridades sempre começam em 0 e vão até o valor mais alto indicado pelo operador nas faixas. Nos exemplos, vão de 0 a 100. A informação 'valor' representa o valor mais alto da faixa.
 
 .. figure:: prioridade.png
    :scale: 45 %
@@ -176,11 +185,13 @@ Na primeira o cliente optou por três faixas de prioridade e na segunda, por cin
 .. figure:: prioridade2.png
    :scale: 45 %
    :alt: parâmetros do chamado
+   
+A pontuação da prioridade é atribuída automaticamente assim que um chamado é recebido pelo sistema. As pontuações devem ser indicadas previamente nos cadastros do serviço e da hierarquia.
 
   Por serviço
-     Cada serviço pode ter uma pontuação de prioridade padrão atribuída em seu cadastro. Essa prioridade recebe adições de pontuação de outras configurações de prioridade, citadas a seguir, se estiverem ativas.
-  Por chamados vinculados, ou seja, identificados automaticamente ou manualmente como duplicados
-     Ainda no cadastro de serviço, uma pontuação de prioridade pode ser configurada para que seja somada a cada novo vínculo recebido pelo chamado principal, ou seja, a cada novo chamado duplicado associado a ele. 
+     Cada serviço pode ter uma pontuação de prioridade padrão atribuída em seu cadastro. Assim que for recebido, o chamado recebe o valor indicado nessa configuração. Além disso, essa pontuação recebe adições de outras configurações de prioridade, citadas imediatamente a seguir.
+  Por chamados vinculados, ou seja, identificados automaticamente ou manualmente como uma mesma solicitação de serviço
+     Ainda no cadastro de serviço, uma pontuação de prioridade pode ser configurada para que seja somada a um chamado a cada novo vínculo identificado como seu vínculo, ou seja, a cada novo chamado duplicado associado a ele. 
 	 
 .. figure:: servico_conf_pri.png
    :scale: 45 %
@@ -188,7 +199,7 @@ Na primeira o cliente optou por três faixas de prioridade e na segunda, por cin
 	 
 	 
   Por hierarquia
-	 As hierarquias cadastradas, opcionalmente, possuem um pontuação de prioridade a ser somada ao chamado. Isso influi na pontuação dependendo da hierarquia do funcionário que solicitar um chamado.
+	 As hierarquias dos operadores também oferecem a opção de indicar uma pontuação de prioridade a ser somada ao chamado. A pontuação dependendo da hierarquia do operador que abrir ou solicitar um chamado a um atendente.
 
 .. figure:: hierarquia.png
    :scale: 45 %
