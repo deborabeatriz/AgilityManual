@@ -1,7 +1,7 @@
 .. This is a comment. Note how any initial comments are moved by
    transforms to after the document title, subtitle, and docinfo.
 
-.. agility.rst from: https://github.com/deborabeatriz/AgilityManual/  Solicitante,Operador,Gestor 
+.. agility.rst from: https://github.com/deborabeatriz/AgilityManual/   
 
 .. |EXAMPLE| image:: static/yi_jing_01_chien.jpg
    :width: 1em
@@ -177,12 +177,12 @@ O Agility tem faixas de prioridade configuráveis.  A seguir, as figuras mostram
 Na primeira, o operador optou por três faixas de prioridade, entregues pelo Agility como padrão, e na segunda, por cinco. 
 As prioridades sempre começam em 0 e vão até o valor mais alto indicado pelo operador nas faixas. Nos exemplos, vão de 0 a 100. A informação 'valor' representa o valor mais alto da faixa.
 
-.. figure:: prioridade.png
+.. figure:: prioridades.png
    :scale: 45 %
    :alt: cadastro de serviço
 
    
-.. figure:: prioridade2.png
+.. figure:: prioridades2.png
    :scale: 45 %
    :alt: parâmetros do chamado
    
