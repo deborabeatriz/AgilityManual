@@ -88,17 +88,17 @@ A figura a seguir mostra a primeira aba do cadastro de um serviço.
 Quando o serviço é meramente informativo, a opção do cadastro 'Elegível Chamado' fica desabilitada, sendo que o serviço exibe apenas textos informativos indicados na aba "Textos Serviços". 
 Já um serviço que pode dar origem a um chamado, tem a opção do cadastro 'Elegível Chamado' habilitada. Além disso, serviços que podem dar origem a chamados possuem parâmetros configuráveis informados na aba "Parâmetros Chamado".
 
-.. figure:: servico_conf.png
+.. figure:: servico_conf.PNG
    :scale: 45 %
    :alt: cadastro de serviço
 
    
-.. figure:: servico_conf2.png
+.. figure:: servico_conf2.PNG
    :scale: 45 %
    :alt: parâmetros do chamado
 
 
-.. figure:: servico_conf3.png
+.. figure:: servico_conf3.PNG
    :scale: 45 %
    :alt: texto
  
@@ -177,12 +177,12 @@ O Agility tem faixas de prioridade configuráveis.  A seguir, as figuras mostram
 Na primeira, o operador optou por três faixas de prioridade, entregues pelo Agility como padrão, e na segunda, por cinco. 
 As prioridades sempre começam em 0 e vão até o valor mais alto indicado pelo operador nas faixas. Nos exemplos, vão de 0 a 100. A informação 'valor' representa o valor mais alto da faixa.
 
-.. figure:: prioridades.png
+.. figure:: prioridades.PNG
    :scale: 45 %
    :alt: cadastro de serviço
 
    
-.. figure:: prioridades2.png
+.. figure:: prioridades2.PNG
    :scale: 45 %
    :alt: parâmetros do chamado
    
@@ -201,6 +201,6 @@ A pontuação da prioridade é atribuída automaticamente assim que um chamado �
   Por hierarquia
 	 As hierarquias dos operadores também oferecem a opção de indicar uma pontuação de prioridade a ser somada ao chamado. A pontuação dependendo da hierarquia do operador que abrir ou solicitar um chamado a um atendente.
 
-.. figure:: hierarquia.png
+.. figure:: hierarquia.PNG
    :scale: 45 %
    :alt: hierarquias
